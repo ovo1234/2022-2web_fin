@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>하루하루</title>
+    <link rel="stylesheet" href="/account_input.css" />
+</head>
+<body>
+    <header>
+        <span> <하루하루> </span>
+
+        <img id="cal_img" src="./img/cal_img.png" alt="cal_img">
+        
+        <!-- 계산기 -->
+
+        <div class="cal">
+            <table class="cal2">
+                <tr>
+                    <td colspan="4"> 
+                        <input type="text" id="cal_display" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="text" id="cal_result" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" onclick="cal_DelAll()"> clear </td>
+                    <td onclick="cal_Num('%')">%</td>
+                </tr>
+                <tr>
+                    <td onclick="cal_Num(7)">7</td>
+                    <td onclick="cal_Num(8)">8</td>
+                    <td onclick="cal_Num(9)">9</td>
+                    <td onclick="cal_Num('+')">+</td>
+                </tr>
+                <tr>
+                    <td onclick="cal_Num(4)">4</td>
+                    <td onclick="cal_Num(5)">5</td>
+                    <td onclick="cal_Num(6)">6</td>
+                    <td onclick="cal_Num('-')">-</td>
+                </tr>
+                <tr>
+                    <td onclick="cal_Num(1)">1</td>
+                    <td onclick="cal_Num(2)">2</td>
+                    <td onclick="cal_Num(3)">3</td>
+                    <td onclick="cal_Num('*')">*</td>
+                </tr>
+                <tr>
+                    <td colspan="2" onclick="cal_Num(0)">0</td>
+                    <td onclick="cal_Del()"> <- </td>
+                    <td onclick="cal()">=</td>
+                </tr>
+            </table>
+        </div>
+    </header>
+
+    <img id="bg_hr" src="./img/bg_hr.png" alt="bg_hr">
+
+    <!-- 가계부 작성 -->
+
+    <div id="container">
+        <div>
+            <table id="account" class ="item">
+                    
+                <th width = "10%"> 날짜 </th>
+                <th width = "40%"> 내용 </th>
+                <th width = "15%"> 수입 </th>
+                <th width = "15%"> 지출 </th>
+    
+                <tr class="accout_row">
+                    
+                </tr>
+    
+    
+            </table>
+        </div>
+
+        <div class ="item">
+            <img id="bt_plus" src="./img/bt_plus.png" alt="bt_plus">
+        </div>
+        <div class ="item">
+            <table id="all_cal">
+                <tr>
+                    <td>수입</td>
+                    <td width="70%"><input type="text" id="income_output" disabled>원</td>
+                </tr>
+                <tr>
+                    <td>지출</td>
+                    <td><input type="text" id="expense_output" value="" disabled>원</td>
+                </tr>
+                <tr>
+                    <td>잔액</td>
+                    <td><input type="text" id="balance_output" disabled>원</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+    <script type="text/javascript" src="./account_input.js"></script>
+</html>
